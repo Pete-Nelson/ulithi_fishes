@@ -6,7 +6,7 @@
 # Ulithi fishes
 # read in and wrangle fish, site and environmental data
 # created 26 May 2023
-# last modified 5 June 2023
+# last modified 6 June 2023
 
 # maybe...
 setwd("G:/My Drive/GitHub Gdrive Projects/ulithi_fishes")
@@ -61,6 +61,10 @@ counts <-
   relocate(count_total, .after = depth)
 
 # biomass -----
+## to do -----
+# Develop biomass df with higher level location data (eg Ulithi, Ifalik--island?) and with two trophic level designations only--confer w Giacomo and Michelle. 'biom2' is getting closer.
+# Work on figures, probably in a separate code file.
+
 # calculated here with all spp (including sharks, large schools)
 biom1 <- rename(temp, phase = 'IP_TP') %>% 
   clean_names() %>% 
