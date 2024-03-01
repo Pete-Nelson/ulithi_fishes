@@ -154,6 +154,16 @@ base + geom_boxplot() +
   theme_tq()
 
 # SCRATCH ###########################################
+## example data -----
+(temp <- counts %>% 
+  filter(year == 2012) %>% 
+  ungroup() %>% 
+  select(-c(1, 3:5)) %>% 
+  column_to_rownames(var = "site") %>% 
+  select(c(1, 15:35)))
+
+write_csv(temp, file.choose())
+
 ## biomass ----
 # alternative code
 # biomass calculated with all spp recorded
